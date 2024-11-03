@@ -1,19 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { Observable } from 'rxjs';
-import { Car } from './car';
+import { HttpClient } from '@angular/common/http';
+import { Vehiculo } from './vehiculo';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CarService {
+export class VehiculoService {
   private apiUrl = environment.baseUrl + "202212_MISW4104_Grupo1.json"
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-getCars(): Observable<Car[]> {
-  return this.http.get<Car[]>(this.apiUrl);
-}
+  getVehiculo(): Observable<Vehiculo[]> {
+    return this.http.get<Vehiculo[]>(this.apiUrl);
+  }
 
 }

@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarModule } from './car/car.module';
 import { HttpClientModule } from '@angular/common/http';
+import { VehiculoModule } from './vehiculo/vehiculo.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarModule, 
+    VehiculoModule,
     HttpClientModule
   ],
   providers: [],
