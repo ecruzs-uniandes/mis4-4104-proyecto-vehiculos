@@ -12,7 +12,7 @@ export class VehiculoService {
 
   constructor(private http: HttpClient) { }
 
-  getVehiculo(): Observable<Vehiculo[]> {
+  getVehiculos(): Observable<Vehiculo[]> {
     return this.http.get<Vehiculo[]>(this.apiUrl);
   }
 
